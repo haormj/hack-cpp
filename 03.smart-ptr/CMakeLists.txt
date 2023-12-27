@@ -1,0 +1,1 @@
+add_executable(smart-ptr main.cpp)
