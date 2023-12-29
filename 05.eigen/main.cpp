@@ -1,5 +1,6 @@
 #include <iostream>
 #include <Eigen/Dense>
+#include <Eigen/Geometry>
 
 int main() {
 	Eigen::Vector3d v(1, 2, 3);
@@ -21,5 +22,7 @@ int main() {
 	std::cout << "向量夹角弧度：" << v1_v2_rad << std::endl;
 	std::cout << "向量夹角度数：" << v1_v2_rad * 180 / M_PI << std::endl;
 
+	// 四元数
+	
 	return 0;
 }
