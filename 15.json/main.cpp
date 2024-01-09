@@ -7,17 +7,7 @@ struct People {
 	std::string name;
 	int age;
 
-	friend void from_json(const nlohmann::json& j, People& p) {
-		j.at("name").get_to(p.name);
-		j.at("age").get_to(p.age);
-	}
-
-	friend void to_json(nlohmann::json& j, const People& p) {
-		j = nlohmann::json{
-			{"name", p.name},
-			{"age", p.age}
-		};
-	}
+    NLOHMANN_DEFINE_TYPE_INTRUSIVE(People, name, age)
 
 	friend std::ostream& operator<<(std::ostream& os, const People& p) {
 		os << "name:" << p.name << ",age:" << p.age;
