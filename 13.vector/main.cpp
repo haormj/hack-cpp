@@ -40,8 +40,8 @@ int main() {
 	p.push_back(People("xx", 10));
 	std::cout << "current capacity: " << p.capacity() << std::endl;
 
-	for (auto i = p.begin(); i != p.end(); i++) {
-		std::cout << *i << std::endl;
+	for (auto it = p.begin(); it != p.end(); it++) {
+		std::cout << *it << std::endl;
 	}
 
 	return 0;
